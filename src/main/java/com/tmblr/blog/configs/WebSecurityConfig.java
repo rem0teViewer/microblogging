@@ -12,14 +12,6 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig {
-    private final UserService userService;
-
-    private final PasswordEncoder passwordEncoder;
-
-    public WebSecurityConfig(UserService userService, PasswordEncoder passwordEncoder) {
-        this.userService = userService;
-        this.passwordEncoder = passwordEncoder;
-    }
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
